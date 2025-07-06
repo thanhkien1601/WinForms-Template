@@ -1,67 +1,116 @@
-# WinForms-ThucHanh-Template
-Repository mẫu cho các bài thực hành môn Lập trình Windows Forms C#
+# **Quy Trình Làm Việc và Nộp Bài Qua GitHub**
 
-# **Bài Thực Hành Môn Lập Trình Windows Forms C#**
+### *Môn học: Lập trình trên môi trường Windows*
 
-Chào mừng các bạn đến với môn học Lập trình Windows Forms. Repository này là nơi các bạn sẽ lưu trữ và nộp tất cả các bài thực hành trong suốt 9 tuần học.
+Chào mừng các bạn đến với môn học. Repository này là repository **TRUNG TÂM**, nơi chứa đề bài và cấu trúc chung.
 
-## **QUY TẮC BẮT BUỘC**
+> [\!IMPORTANT]
+> Các bạn sẽ **KHÔNG** làm việc trực tiếp trên đây. Thay vào đó, hãy đọc kỹ và làm theo hướng dẫn **Fork & Pull Request** được mô tả chi tiết dưới đây.
 
-Mỗi sinh viên **BẮT BUỘC** phải tuân thủ các quy tắc sau để được chấm điểm:
+-----
 
-1.  **Tạo Repository của riêng bạn:** Sử dụng repository này làm MẪU (template).
-2.  **Đặt tên Repository:** `[MSSV]-[HoTen]` (Ví dụ: `2001210123-NguyenVanA`).
-3.  **Nộp bài đúng cấu trúc:** Mỗi tuần sẽ có một thư mục tương ứng (`Tuan01`, `Tuan02`...). Project Visual Studio của tuần nào phải nằm **TRỌN VẸN** trong thư mục của tuần đó.
-4.  **Commit thường xuyên:** Thực hiện commit sau mỗi lần hoàn thành một chức năng quan trọng với nội dung commit rõ ràng.
+## **I. HƯỚNG DẪN THIẾT LẬP MÔI TRƯỜNG (Chỉ làm 1 lần duy nhất)**
 
----
+*Hoàn thành các bước sau để chuẩn bị môi trường làm việc cho toàn bộ môn học.*
 
-## **HƯỚNG DẪN THIẾT LẬP (CHỈ LÀM 1 LẦN DUY NHẤT)**
+### **Bước 1: Fork Repository - Tạo "Bản Sao" về tài khoản GitHub của bạn**
 
-#### **Bước 1: Tạo Repository cá nhân từ mẫu này**
-1.  Nhấn vào nút màu xanh lá **Use this template** > **Create a new repository** ở góc trên bên phải.
-2.  **Owner:** Chọn tài khoản GitHub của bạn.
-3.  **Repository name:** Đặt tên theo đúng quy tắc: `[MSSV]-[HoTen]`.
-4.  **Description:** Giữ nguyên hoặc thêm mô tả của riêng bạn.
-5.  Chọn **Public**.
-6.  Nhấn **Create repository**.
+1.  Tại trang repository này của giảng viên, nhấn vào nút **Fork** ở góc trên bên phải.
+2.  Một cửa sổ sẽ hiện ra, nhấn **Create fork**.
+3.  GitHub sẽ tự động tạo một bản sao của repository này dưới tài khoản của bạn.
+      * URL của bản sao sẽ có dạng: `github.com/your-username/WinForms-Template`.
+      * Đây chính là **Repository cá nhân** của bạn, nơi bạn có toàn quyền chỉnh sửa và lưu trữ bài làm.
 
-#### **Bước 2: Clone repository về máy tính của bạn**
-1.  Vào trang repository bạn vừa tạo.
-2.  Nhấn nút màu xanh lá **<> Code**.
-3.  Copy đường link HTTPS (ví dụ: `https://github.com/your-username/[MSSV]-[HoTen].git`).
-4.  Mở Git Bash hoặc Terminal trên máy tính, di chuyển đến thư mục bạn muốn lưu bài tập và gõ lệnh:
+### **Bước 2: Clone Repository cá nhân về máy tính**
+
+1.  Truy cập trang repository bạn vừa fork (repository cá nhân).
+
+2.  Nhấn vào nút màu xanh lá **`< > Code`** và sao chép đường link `HTTPS`.
+
+3.  Mở **Git Bash** (hoặc Terminal) trên máy tính của bạn, di chuyển đến thư mục bạn muốn lưu trữ bài tập và chạy lệnh sau:
+
     ```bash
-    git clone [đường-link-bạn-vừa-copy]
+    git clone [đường-link-HTTPS-bạn-vừa-sao-chép]
     ```
 
----
+### **Bước 3: Tạo Branch (Nhánh) làm việc cá nhân**
+Tạo branch mới với tên theo định dạng: **[MSSV]-[HoTen]**
+> [\!NOTE]
+> Việc tạo Branch riêng giúp công việc của bạn được độc lập, tránh ảnh hưởng đến nhánh `main` gốc. Toàn bộ bài làm trong suốt môn học sẽ được thực hiện trên branch này.
 
-## **QUY TRÌNH LÀM BÀI HÀNG TUẦN (LẶP LẠI 9 LẦN)**
+Sau khi clone xong, hãy di chuyển vào thư mục dự án và tạo branch mới theo cú pháp `[MSSV]-[HoTen]`.
 
-Giả sử bạn đang làm bài thực hành cho **Tuần 1**.
+```bash
+# Di chuyển vào thư mục repository vừa clone về
+cd WinForms-Template
 
-#### **Bước 1: Tạo Project Visual Studio đúng vị trí**
-1.  Mở thư mục repository đã clone về máy (ví dụ: `D:\2001210123-NguyenVanA`).
-2.  Đi vào thư mục của tuần tương ứng, ví dụ: `Tuan01`.
-3.  Mở Visual Studio, tạo một Project Windows Forms mới và ở bước **Configure your project**, mục **Location**, hãy trỏ đường dẫn đến thư mục của tuần đó (ví dụ: `D:\...\Tuan01`).
+# Tạo và chuyển sang một branch mới để làm việc
+git checkout -b [MSSV]-[HoTen]
 
-#### **Bước 2: Làm bài và Commit**
-1.  Thực hiện các yêu cầu của bài thực hành.
-2.  Sau khi làm xong một yêu cầu, hãy mở Git Bash/Terminal và thực hiện các lệnh sau:
+# Ví dụ cụ thể:
+# git checkout -b 2001210123-NguyenVanA
+```
+
+-----
+
+## **II. QUY TRÌNH LÀM BÀI VÀ NỘP BÀI HÀNG TUẦN**
+
+*Đây là vòng lặp công việc bạn sẽ thực hiện cho mỗi bài thực hành hàng tuần.*
+
+### **Bước 1: Phát triển tính năng và Commit trên Branch cá nhân**
+
+1.  **Đảm bảo** bạn đang ở trên branch của mình bằng lệnh `git branch` (branch hiện tại sẽ có dấu `*`).
+
+2.  **Tạo project** Visual Studio vào đúng thư mục của tuần tương ứng (ví dụ: `Tuan02`), đặt tên cho Project theo định dạng **[MSSV]-[HoTen]**.
+
+3.  **Làm bài và commit thường xuyên.** 
+
     ```bash
-    # Thêm tất cả các thay đổi vào Git
+    # 1. Thêm tất cả các file đã thay đổi vào Staging Area
     git add .
 
-    # "Đóng gói" các thay đổi với một thông điệp rõ ràng
-    git commit -m "Tuan01: Hoan thanh chuc nang Them, Xoa, Sua"
+    # 2. Commit với một thông điệp mô tả rõ ràng sự thay đổi
+    git commit -m "Tuan02: Feat - Them chuc nang luu du lieu Sinh Vien"
+    ```
 
-    # Đẩy các thay đổi lên GitHub
+### **Bước 2: Đẩy (Push) mã nguồn lên Repository cá nhân (Fork)**
+
+Sau khi hoàn thành bài làm của tuần, hãy đẩy các commit từ máy tính của bạn lên branch làm việc trên GitHub.
+
+  * **Đối với lần push đầu tiên của branch này:**
+
+    ```bash
+    git push --set-upstream origin [MSSV]-[HoTen]
+    ```
+
+  * **Từ những lần push sau, bạn chỉ cần dùng lệnh ngắn gọn:**
+
+    ```bash
     git push
     ```
-**Mẹo:** Hãy tập thói quen `commit` với thông điệp có ý nghĩa. Ví dụ:
-* `git commit -m "Tuan01: Thiet ke giao dien form Quan Ly Sinh Vien"`
-* `git commit -m "Tuan01: Them chuc nang ket noi CSDL"`
 
-#### **Bước 3: Nộp bài**
-Giảng viên sẽ chấm bài trực tiếp trên repository GitHub của bạn vào cuối mỗi tuần. Bạn chỉ cần đảm bảo đã `push` code mới nhất lên trước hạn chót.
+### **Bước 3: Nộp bài bằng cách tạo Pull Request (PR)**
+
+Đây là bước **quan trọng nhất** để nộp bài cho giảng viên.
+
+1.  Truy cập trang repository cá nhân của bạn trên GitHub.
+
+2.  Bạn sẽ thấy một thông báo nổi bật với nút **"Compare & pull request"**. Hãy nhấn vào đó.
+
+      * *Nếu không thấy, hãy vào tab **"Pull requests"** và nhấn **"New pull request"**.*
+
+3.  **Kiểm tra lại thông tin cẩn thận:**
+
+    > [\!IMPORTANT]
+    > Dòng `base repository` phải là repository của giảng viên và `head repository` là repository của bạn. Mũi tên chỉ hướng nộp bài:
+
+    > :arrow\_left: `base: main` **\<--** `compare: [MSSV]-[HoTen]`
+
+4.  **Đặt tiêu đề cho Pull Request** theo cú pháp:
+
+      * `[Nộp bài Tuần XX]-[MSSV]-[Họ Tên] - `
+      * *Ví dụ:* `[Nộp bài Tuần 02]-2001210123-Nguyễn Văn A`
+
+5.  Nhấn nút **"Create pull request"**.
+
+:white\_check\_mark: **Bạn đã nộp bài thành công\!** Giảng viên sẽ nhận được thông báo, xem bài làm và có thể để lại phản hồi trực tiếp trên Pull Request của bạn.
