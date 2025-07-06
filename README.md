@@ -101,10 +101,9 @@ Sau khi hoàn thành bài làm của tuần, hãy đẩy các commit từ máy t
 
 3.  **Kiểm tra lại thông tin cẩn thận:**
 
-    > [\!IMPORTANT]
-    > Dòng `base repository` phải là repository của giảng viên và `head repository` là repository của bạn. Mũi tên chỉ hướng nộp bài:
-
-    > :arrow\_left: `base: main` **\<--** `compare: [MSSV]-[HoTen]`
+   > [\!IMPORTANT]
+        Dòng `base repository` phải là repository của giảng viên và `head repository` là repository của bạn. Mũi tên chỉ hướng nộp bài:
+        `base: main` **\<--** `compare: [MSSV]-[HoTen]`
 
 4.  **Đặt tiêu đề cho Pull Request** theo cú pháp:
 
